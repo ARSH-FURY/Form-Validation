@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script defer src="advancedForm.js"></script>
+    <script src="https://kit.fontawesome.com/3ae66171e0.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .box {
+            background: url(pexels-sohail-nachiti-807598.jpg);
+            height: 550px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .formc {
+            background-color: hsla(200, 100%, 7%, 0.724);
+            height: 450px;
+            width: 25%;
+            box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.628);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        input {
+            width: 100%;
+            background-color: hsla(200, 100%, 91%, 0.374);
+            text-align: center;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+
+        }
+
+        ::placeholder {
+            color: white;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        label {
+            color: white;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        span {
+            font-size: 15px;
+            color: red;
+        }
+
+        i {
+            color: greenyellow;
+        }
+
+        input {
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="formc">
+
+            <h2>WELCOME</h2>
+            <form class="form">
+
+                <label for="name">FULL NAME</label>
+                <input type="text" id="name" name="name" onkeyup="nameValidator()">
+                <span id="name-error"></span>
+
+                <label for="phone">PHONE NUMBER</label>
+                <input type="text" id="phone" name="phone" onkeyup="phoneValidator()">
+                <span id="phone-error"></span>
+
+                <label for="email">EMAIL</label>
+                <input type="text" id="email" name="email" onkeyup="emailValidator()">
+                <span id="email-error"></span>
+
+                <button onclick="return validateForm()" id="button">LOG IN</button>
+                <span id="submit-error"></span>
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
